@@ -28,7 +28,7 @@ Sierra Chart Package 5
 
 ### Installing
 
-A step by step series of instructions to manually install Advanced Custom Study files on [Sierra Charts](https://www.sierrachart.com/index.php?page=doc/UsingAdvancedCustomStudies.php#ManuallyInstallingAdvancedCustomStudyRelatedFiles)
+Manually install Advanced Custom Study files on Sierra Chart using [SC forum instructions](https://www.sierrachart.com/index.php?page=doc/UsingAdvancedCustomStudies.php#ManuallyInstallingAdvancedCustomStudyRelatedFiles).
 
 Download the DLL file and save it in your SierraChart Data folder
 
