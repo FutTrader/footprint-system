@@ -38,20 +38,18 @@ SCSFExport scsf_FootprintReversalSystem(SCStudyInterfaceRef sc)
 		sc.ValueFormat = sc.BaseGraphValueFormat;
 
 		// During development set this flag to 1, so the DLL can be rebuilt without restarting Sierra Chart. When development is completed, set it to 0 to improve performance.
-		sc.FreeDLL = 1;
+		sc.FreeDLL = 0;
 		sc.MaintainVolumeAtPriceData = 1;  // true
 		sc.CalculationPrecedence = LOW_PREC_LEVEL;
 
 		Buy.Name = "Buy";
 		Buy.PrimaryColor = RGB(0, 255, 0);	// green
 		Buy.DrawStyle = DRAWSTYLE_TRANSPARENT_FILL_RECTANGLE_BOTTOM;
-		Buy.LineWidth = 2;	//Width of arrow
 		Buy.DrawZeros = 0;  //Set to 0 to disable drawing of zero values. Without it there will be a continuous line drawn.
 
 		Sell.Name = "Sell";
 		Sell.DrawStyle = DRAWSTYLE_TRANSPARENT_FILL_RECTANGLE_BOTTOM;
 		Sell.PrimaryColor = RGB(255, 0, 0);	// red
-		Sell.LineWidth = 2; //Width of arrow
 		Sell.DrawZeros = 0; //Set to 0 to disable drawing of zero values. Without it there will be a continuous line drawn.
 
 		Input_LongSignal.Name = "Alert Long Signals";
@@ -74,7 +72,7 @@ SCSFExport scsf_FootprintReversalSystem(SCStudyInterfaceRef sc)
 		Input_FillToTopBottomBar.SetCustomInputIndex(0);
 
 		Input_PercentageThreshold.Name = "Buy/Sell Imabalance Percentage Threshold";
-		Input_PercentageThreshold.SetInt(150);
+		Input_PercentageThreshold.SetInt(400);
 
 		Input_AllowZeroValueCompares.Name = "Enable Zero Bid/Ask Compares";
 		Input_AllowZeroValueCompares.SetYesNo(0);
