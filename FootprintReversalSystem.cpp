@@ -21,7 +21,7 @@ SCSFExport scsf_FootprintReversalSystem(SCStudyInterfaceRef sc)
 	SCInputRef Input_ShortSignal = sc.Input[1];
 	SCInputRef Input_AlertNumber = sc.Input[2];
 	SCInputRef Input_Study1 = sc.Input[3];	//Must select NumberBars2
-	SCInputRef Input_Study1Subgraph = sc.Input[4]; 
+	SCInputRef Input_Study1Subgraph = sc.Input[4]; //Must select SG14 VolBarDiff Array
 	SCInputRef Input_FillToTopBottomBar = sc.Input[5];
 	SCInputRef Input_PercentageThreshold = sc.Input[6];
 	SCInputRef Input_AllowZeroValueCompares = sc.Input[7];
