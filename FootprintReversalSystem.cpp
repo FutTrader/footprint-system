@@ -21,7 +21,7 @@ SCSFExport scsf_FootprintReversalSystem(SCStudyInterfaceRef sc)
 	SCInputRef Input_ShortSignal = sc.Input[1];
 	SCInputRef Input_AlertNumber = sc.Input[2];
 	SCInputRef Input_Study1 = sc.Input[3];	//Must select NumberBars2
-	SCInputRef Input_Study1Subgraph = sc.Input[4]; //Must select SG14 VolBarDiff Array
+	SCInputRef Input_Study1Subgraph = sc.Input[4]; // Must select SG14 VolBarDiff Array
 	SCInputRef Input_FillToTopBottomBar = sc.Input[5];
 	SCInputRef Input_PercentageThreshold = sc.Input[6];
 	SCInputRef Input_AllowZeroValueCompares = sc.Input[7];
@@ -52,14 +52,14 @@ SCSFExport scsf_FootprintReversalSystem(SCStudyInterfaceRef sc)
 		Sell.PrimaryColor = RGB(255, 0, 0);	// red
 		Sell.DrawZeros = 0; //Set to 0 to disable drawing of zero values. Without it there will be a continuous line drawn.
 
-		Input_LongSignal.Name = "Alert Long Signals";
+		Input_LongSignal.Name = "Alert Buy Signals";
 		Input_LongSignal.SetYesNo(true);
 
 		Input_ShortSignal.Name = "Alert Sell Signals";
-		Input_ShortSignal.SetYesNo(false);
+		Input_ShortSignal.SetYesNo(true);
 
 		Input_AlertNumber.Name = "Reversal Alert Number";
-		Input_AlertNumber.SetAlertSoundNumber(0);
+		Input_AlertNumber.SetAlertSoundNumber(3);
 
 		Input_Study1.Name = "Input NumberBars2";
 		Input_Study1.SetStudyID(0);
@@ -199,6 +199,12 @@ SCSFExport scsf_FootprintReversalSystem(SCStudyInterfaceRef sc)
 		sc.GetPointOfControlPriceVolumeForBar(BarIndex, TickPOC);
 		float PricePOC = TickPOC.PriceInTicks * sc.TickSize;
 		unsigned int BarLimit = Input_PBBarLimit.GetInt();
+
+		/* Check PBBarLimit User input to make sure it's within the bounds of the bar size, if not set to default */		
+		if (BarLimit >= NumberOfPricesAtBarIndex)
+		{
+			BarLimit = 1;
+		}
 
 		if (PricePOC <= (sc.High[BarIndex] - (sc.TickSize * BarLimit))) //Compares to the Upper Price Limit for a long reversal
 		{
