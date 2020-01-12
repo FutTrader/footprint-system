@@ -3,13 +3,13 @@
 SCDLLName("Footprint Reversal System")
 
 /* Objective: On a subgraph below the FP, draw a bar with an audible alert when the follow conditions are met
-			  1. Footprint bar volume profile - POC withing upper or lower bounds of bar
-			  2. Diagonal buy imbalance - User set input
-			  3. No unfinished auctions
-			  4. Relative volume is greater as per VolumeBarDiff from NumberBars2 study
+			  1. Relative volume is greater as per VolumeBarDiff from NumberBars2 study
+			  2. No unfinished auctions 
+			  3. Diagonal buy imbalance - User set input
+			  4. Footprint bar volume profile - POC withing upper or lower bounds of bar
 
-	Input: 	  Footprint Bar Array and Number Bar Calculated Array
-	Output:   Draw bar with audible alert after triggering all 4 conditins
+	Input: 	  1. Number Bars Calculated Study with SG14 VolBarDiff Array
+	Output:   Draw bar with audible alert after triggering all 4 conditions
 */
 
 SCSFExport scsf_PnBReversalSystem(SCStudyInterfaceRef sc)
