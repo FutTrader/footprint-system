@@ -72,7 +72,7 @@ Set 0 to 1 - Will take the actual value of Bid or Ask and multiply by 100
 Set to +/- 1000% - Will set the Volume Ratio to 1000.
 
 #### LN10: Number of TICKS from High/Low for PB Reversal
-This study assumes that you are using a static range bar chart. Depending on how large your range bar chart is, select a value < MAX_TICK to choose a limit for your volume point of control evaluation. The denoination is in ticks. A smaller value will give you a looser evaluation of the p/b signals while a tighter one will give less triggers.
+This study assumes that you are using a static range bar chart. Depending on how large your range bar chart is, select a value < **MAX_TICK** to choose a limit for your volume point of control evaluation. The denoination is in ticks. A smaller value will give you a looser evaluation of the p/b signals while a tighter one will give less triggers.
 
 ## Author
 
