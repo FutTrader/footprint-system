@@ -13,7 +13,7 @@ The trading system credit goes to Adam from [JumpstartTrading](https://www.jumps
 3. Check for Buy and Sell diagonal imbalances.
 4. Check for p/b volume profiles by using bar POC and comparing it with a user specified bar limit.
 
-
+![Image of Study](https://github.com/FutTrader/footprint-system/blob/assets/FootprintChartWithPBReversal.PNG)
 
 ## Getting Started
 
