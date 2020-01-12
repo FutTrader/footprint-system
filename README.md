@@ -80,8 +80,12 @@ This study assumes that you are using a static range bar chart. Depending on how
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](footprint-system/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/FutTrader/footprint-system/blob/master/RISKDISCLAIMER.md) file for details
 
 ## Acknowledgments
 
 * Adam from [JumpstartTrading](https://www.jumpstarttrading.com/)
+
+## Disclaimer
+
+Refer to [Risk Disclaimer](https://github.com/FutTrader/footprint-system/blob/master/RISKDISCLAIMER.md)
