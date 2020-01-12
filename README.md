@@ -80,7 +80,7 @@ This study assumes that you are using a static range bar chart. Depending on how
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](footprint-system/LICENSE.md) file for details
 
 ## Acknowledgments
 
